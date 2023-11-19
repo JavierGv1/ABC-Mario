@@ -1,7 +1,5 @@
 extends Node
 
-var tecla = null
-var dedo = null
 # Diccionario que asocia dedos con listas de teclas
 var dedos_teclas = {
 	"dedo_meñique_izq": ["q", "a", "z"],
@@ -28,8 +26,8 @@ func resaltar_tecla_y_dedo(letra: String) -> void:
 				break
 
 	# Accede a los nodos de tecla y dedo en la escena
-	tecla = $Teclas.get_node(tecla_nombre)  # Obtiene el nodo de la tecla
-	dedo = $Dedos.get_node(dedo_nombre)  # Obtiene el nodo del dedo
+	var tecla = $Teclas.get_node(tecla_nombre)  # Obtiene el nodo de la tecla
+	var dedo = $Dedos.get_node(dedo_nombre)  # Obtiene el nodo del dedo
 
 	# Cambia el color de la tecla y del dedo a verde si se encontraron los nodos
 	if tecla and dedo:

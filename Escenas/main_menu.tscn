@@ -33,3 +33,4 @@ layout_mode = 2
 icon = ExtResource("3_s1kqc")
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
