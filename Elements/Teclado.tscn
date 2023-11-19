@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dpcrbqnh342go"]
 
-[ext_resource type="Script" path="res://Teclado.gd" id="1_k5kpb"]
-[ext_resource type="Texture2D" uid="uid://bmet5dv4p36yn" path="res://Assets/teclado.png" id="1_opuo6"]
-[ext_resource type="Texture2D" uid="uid://bbkhykd6bxotb" path="res://Assets/R_hand.png" id="2_ekoev"]
-[ext_resource type="Texture2D" uid="uid://bqc8umv43jvbg" path="res://Assets/L_hand.png" id="3_jygrr"]
+[ext_resource type="Script" path="res://Elements/Teclado.gd" id="1_k5kpb"]
+[ext_resource type="Texture2D" uid="uid://b6s1fd8iljinc" path="res://Assets/teclado.png" id="1_opuo6"]
+[ext_resource type="Texture2D" uid="uid://b6s1fd8iljinc" path="res://Assets/teclado.png" id="2_ekoev"]
+[ext_resource type="Texture2D" uid="uid://c8l058tbjdnoa" path="res://Assets/L_hand.png" id="3_jygrr"]
 
 [node name="PanelDelTeclado" type="Node"]
 script = ExtResource("1_k5kpb")

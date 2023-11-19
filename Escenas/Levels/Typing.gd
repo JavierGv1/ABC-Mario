@@ -42,7 +42,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		find_new_active_enemy()
 	else:
 		if event is InputEventKey and not event.is_pressed():
-			var typed_event = event as InputEventKey
+			var _typed_event = event as InputEventKey
 			var key_typed = event.as_text().to_lower()
 			print("Letra tipeada: ", key_typed)
 			var prompt = active_enemy.get_prompt()
