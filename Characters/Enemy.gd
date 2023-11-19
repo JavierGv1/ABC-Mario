@@ -9,7 +9,6 @@ extends Sprite2D
 @onready var prompt = $Texto
 @onready var prompt_text = prompt.get_parsed_text()
 
-
 func _physics_process(_delta: float) -> void:
 	global_position.x -= speed
 	_animated_sprite.play("default")

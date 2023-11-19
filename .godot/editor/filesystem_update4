@@ -1,6 +1,7 @@
-res://main_menu.tscn
-res://Escenas/main_menu.tscn
-res://Escenas/MainMenu.gd
-res://Escenas/Levels/Typing.tscn
-res://Escenas/Levels/Typing.gd
 res://Characters/Player.tscn
+res://Characters/PromptList.gd
+res://Escenas/Levels/PrompList.gd
+res://Escenas/main_menu.tscn
+res://Escenas/Levels/Typing.tscn
+res://Characters/Enemy.tscn
+res://Characters/Enemy.gd
