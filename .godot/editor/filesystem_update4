@@ -1,0 +1,6 @@
+res://main_menu.tscn
+res://Escenas/main_menu.tscn
+res://Escenas/MainMenu.gd
+res://Escenas/Levels/Typing.tscn
+res://Escenas/Levels/Typing.gd
+res://Characters/Player.tscn

@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvtp75wryh44a"]
+
+[ext_resource type="Script" path="res://Characters/Enemy.gd" id="1_xxpxd"]
+[ext_resource type="Texture2D" uid="uid://21wj8xx56ep1" path="res://Assets/goombas.png" id="2_o5k1e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbwsg"]
+atlas = ExtResource("2_o5k1e")
+region = Rect2(48, 0, 24, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga2sm"]
+atlas = ExtResource("2_o5k1e")
+region = Rect2(96, 0, 24, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoaoe"]
+atlas = ExtResource("2_o5k1e")
+region = Rect2(0, 0, 24, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g38bl"]
+atlas = ExtResource("2_o5k1e")
+region = Rect2(24, 0, 24, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wof2d"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbwsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga2sm")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"Dead",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aoaoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g38bl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Enemy" type="Sprite2D"]
+position = Vector2(1063, 548)
+scale = Vector2(2.68981, 2.38794)
+offset = Vector2(1, 2)
+hframes = 2
+script = ExtResource("1_xxpxd")
+
+[node name="Texto" type="RichTextLabel" parent="."]
+anchors_preset = -1
+anchor_left = -0.735
+anchor_top = -0.812
+anchor_right = 1.529
+anchor_bottom = -0.094
+offset_left = -42.0191
+offset_top = -46.0904
+offset_right = 34.7169
+offset_bottom = -20.8084
+bbcode_enabled = true
+scroll_active = false
+tab_size = 20
+shortcut_keys_enabled = false
+
+[node name="AnimationCompa" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.497097, -6.56925)
+scale = Vector2(1.13586, 1.24439)
+sprite_frames = SubResource("SpriteFrames_wof2d")
+autoplay = "default"
