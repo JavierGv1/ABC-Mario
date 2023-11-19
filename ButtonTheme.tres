@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://infegbnmvssg"]
+
+[ext_resource type="FontFile" uid="uid://bhgxrt1w2x0tf" path="res://SuperMario256.ttf" id="1_l1cvv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg1bo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[resource]
+default_font = ExtResource("1_l1cvv")
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 20
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_l1cvv")
+Button/styles/normal = SubResource("StyleBoxFlat_mg1bo")

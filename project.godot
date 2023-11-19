@@ -19,7 +19,14 @@ config/icon="res://icon.svg"
 
 PromptList="*res://Characters/PromptList.gd"
 
+[display]
+
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

@@ -4,6 +4,5 @@ res://Escenas/Levels/PrompList.gd
 res://Escenas/Levels/Typing.tscn
 res://Characters/Player.tscn
 res://Characters/Enemy.tscn
-res://Escenas/MainMenu.gd
 res://Elements/Teclado.tscn
-res://Elements/Teclado.gd
+res://ButtonTheme.tres

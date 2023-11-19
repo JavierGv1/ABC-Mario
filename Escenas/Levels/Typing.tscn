@@ -40,7 +40,7 @@ position = Vector2(1214, 284)
 position = Vector2(-55, 1)
 
 [node name="Player" parent="." instance=ExtResource("4_fb6pe")]
-position = Vector2(68, 231)
+position = Vector2(68, 235)
 offset = Vector2(3.91874, 54.1706)
 flip_h = false
 frame = 0

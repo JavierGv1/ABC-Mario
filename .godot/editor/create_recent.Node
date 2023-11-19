@@ -1,6 +1,6 @@
+HBoxContainer
+TextureRect
 Button
 VBoxContainer
-TextureRect
 CenterContainer
-HBoxContainer
 MarginContainer
