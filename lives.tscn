@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://s30dh3eoljkm"]
+
+[ext_resource type="Texture2D" uid="uid://by8mrm2h1juq5" path="res://Assets/heart.png" id="1_3oig6"]
+
+[node name="UILives" type="TextureRect"]
+texture_filter = 2
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 80.0
+scale = Vector2(1.00916, 1.00629)
+texture = ExtResource("1_3oig6")
+stretch_mode = 5

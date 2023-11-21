@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dpxlpndvv1r3i"]
+
+[ext_resource type="FontFile" uid="uid://bhgxrt1w2x0tf" path="res://SuperMario256.ttf" id="1_ficuq"]
+
+[resource]
+default_font_size = 15
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/outline_size = 10
+RichTextLabel/fonts/normal_font = ExtResource("1_ficuq")

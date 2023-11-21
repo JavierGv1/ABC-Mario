@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cpbfoghc3vo6o"]
+
+[ext_resource type="FontFile" uid="uid://bhgxrt1w2x0tf" path="res://SuperMario256.ttf" id="1_kustd"]
+
+[resource]
+font = ExtResource("1_kustd")
+font_size = 20
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)

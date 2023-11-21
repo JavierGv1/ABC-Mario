@@ -1,9 +1,10 @@
-extends Sprite2D
+class_name Enemy extends Area2D
+
 @export var blue = Color("#4682b4")
 @export var red = Color("#639765")
 @export var green = Color("#a65455")
 
-@export var speed = 0.5
+@export var speed = 4
 
 @onready var _animated_sprite = $AnimationCompa
 @onready var prompt = $Texto
@@ -32,8 +33,8 @@ func set_next_character(next_character_index: int):
 	prompt.parse_bbcode(add_tags(text))
 
 func add_tags(word: String) -> String:
-	var begin = "[center][outline_size=2][outline_color=#000000]"
-	var end = "[/outline_color][/outline_size][/center]"
+	var begin = "[center]"
+	var end = "[/center]"
 	return begin+word+end
 	
 func get_bbdcode_color_tag(color: Color) -> String:
@@ -41,3 +42,9 @@ func get_bbdcode_color_tag(color: Color) -> String:
 
 func get_bbcode_end_color_tag() -> String:
 	return "[/color]"
+
+func _on_body_entered(body):
+	if body is Player:
+		print("body")
+		var player = body
+		player.die()

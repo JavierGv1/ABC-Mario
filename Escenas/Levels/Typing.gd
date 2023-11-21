@@ -7,13 +7,28 @@ var teclado_scene = preload("res://Elements/Teclado.tscn")
 # Referencias a los nodos
 @onready var enemy_container = $EnemyContainer
 @onready var spawn_container = $SpawnContainer
+@onready var HUD = $UI/HUD
+@onready var player = $Player
 
 # Variables de juego
 var active_enemy = null
 var current_letter_index: int = 0
 var teclado_panel = null  # Referencia al panel del teclado
 
+var Score := 0 :
+	set(value):
+		Score = value
+		HUD.score = Score
+
+var lives =3:
+	set(values):
+		lives = values
+		HUD.init_lives(lives)
+
 func _ready() -> void:
+	Score = 0
+	lives = 3
+	
 	# Instanciar y agregar el panel del teclado
 	var teclado_instance = teclado_scene.instantiate()
 	add_child(teclado_instance)
@@ -59,12 +74,16 @@ func _unhandled_input(event: InputEvent) -> void:
 				active_enemy.set_next_character(current_letter_index)
 				teclado_panel.reiniciar_colores_teclas()
 				if current_letter_index == prompt.length():
+					Score += 200
 					current_letter_index = 0
 					active_enemy.queue_free()
 					active_enemy = null
 					find_new_active_enemy()
+					print("Puntaje: ",Score )
 			else:
+				Score -= 50
 				print("Letra escrita incorrecta ", key_typed)
+				print("Puntaje: ",Score )
 
 func _on_spawn_timer_timeout() -> void:
 	spawn_enemy()
@@ -75,3 +94,9 @@ func spawn_enemy() -> void:
 	var spawn = spawn_container.get_children()
 	enemy_container.add_child(enemy_instance)
 	enemy_instance.global_position = spawn[0].global_position
+	
+func _on_player_died():
+	print("vidas:",lives)
+	lives -=1
+	if lives == 0:
+		get_tree().reload_current_scene()

@@ -1,9 +1,14 @@
-res://Escenas/main_menu.tscn
+res://HUD.tscn
 res://Characters/Enemy.gd
 res://Escenas/Levels/PrompList.gd
+res://Label.tres
+res://ButtonTheme.tres
 res://Escenas/Levels/Typing.tscn
+res://Escenas/Levels/Typing.gd
+res://Escenas/main_menu.tscn
 res://Characters/Player.tscn
 res://Characters/Enemy.tscn
 res://Elements/Teclado.tscn
-res://ButtonTheme.tres
-res://levels.tscn
+res://lives.tscn
+res://HUD.tres
+res://game_over.tscn

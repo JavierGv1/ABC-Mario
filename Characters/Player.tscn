@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqrrcnmanbe3p"]
+[gd_scene load_steps=9 format=3 uid="uid://cqrrcnmanbe3p"]
 
 [ext_resource type="Script" path="res://Characters/Player.gd" id="1_8nlr8"]
 [ext_resource type="Texture2D" uid="uid://u0reldt61e0" path="res://Assets/SMW_player-pouse_Mario.png" id="2_pa0fb"]
@@ -42,13 +42,13 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="Player" type="Sprite2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pbc5"]
+radius = 5.22499
+height = 22.0068
+
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(90, 516)
 scale = Vector2(6.12442, 4.72581)
-flip_h = true
-hframes = 8
-vframes = 6
-frame = 2
 script = ExtResource("1_8nlr8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -56,5 +56,11 @@ position = Vector2(1.30625, 1.05802)
 scale = Vector2(0.653076, 0.731442)
 sprite_frames = SubResource("SpriteFrames_olpbi")
 autoplay = "default"
-frame_progress = 0.0985434
+frame_progress = 0.479155
 flip_h = true
+
+[node name="ShapeCast2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.979684, 2.53925)
+shape = SubResource("CapsuleShape2D_4pbc5")
+
+[connection signal="died" from="." to="." method="_on_died"]
