@@ -27,7 +27,7 @@ var lives =3:
 
 func _ready() -> void:
 	Score = 0
-	lives = 3
+	lives = 1
 	
 	# Instanciar y agregar el panel del teclado
 	var teclado_instance = teclado_scene.instantiate()
@@ -99,4 +99,4 @@ func _on_player_died():
 	print("vidas:",lives)
 	lives -=1
 	if lives == 0:
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://Escenas/game_over.tscn")

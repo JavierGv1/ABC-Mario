@@ -1,6 +1,7 @@
 TextureRect
-Label
 VBoxContainer
+Button
+Label
 HBoxContainer
 TextEdit
 Sprite2D
@@ -11,6 +12,5 @@ ShapeCast2D
 Control
 CanvasLayer
 PanelContainer
-Button
 CenterContainer
 MarginContainer

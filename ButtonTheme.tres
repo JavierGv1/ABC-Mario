@@ -1,9 +1,17 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://infegbnmvssg"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://infegbnmvssg"]
 
 [ext_resource type="FontFile" uid="uid://bhgxrt1w2x0tf" path="res://SuperMario256.ttf" id="1_l1cvv"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xnfrt"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg1bo"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y43j8"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
 
 [resource]
 default_font = ExtResource("1_l1cvv")
@@ -12,7 +20,11 @@ Button/colors/font_outline_color = Color(0, 0, 0, 1)
 Button/constants/outline_size = 20
 Button/font_sizes/font_size = 50
 Button/fonts/font = ExtResource("1_l1cvv")
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = SubResource("StyleBoxEmpty_xnfrt")
 Button/styles/normal = SubResource("StyleBoxFlat_mg1bo")
+Button/styles/pressed = SubResource("StyleBoxEmpty_y43j8")
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/constants/outline_size = 10
 RichTextLabel/fonts/normal_font = ExtResource("1_l1cvv")

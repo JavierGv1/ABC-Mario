@@ -12,3 +12,7 @@ res://Elements/Teclado.tscn
 res://lives.tscn
 res://HUD.tres
 res://game_over.tscn
+res://GameOverUI.tres
+res://default_bus_layout.tres
+res://game_over.gd
+res://Escenas/game_over.tscn
