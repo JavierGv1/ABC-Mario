@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://iwt2mhinad6m" path="res://Assets/Wallpaper.jpg" id="1_3jqyg"]
 [ext_resource type="FontFile" uid="uid://bhgxrt1w2x0tf" path="res://SuperMario256.ttf" id="1_8cpry"]
-[ext_resource type="Script" path="res://game_over.gd" id="1_omij4"]
+[ext_resource type="Script" path="res://Escenas/game_over.gd" id="1_omij4"]
 [ext_resource type="Texture2D" uid="uid://xopaai7iaiyu" path="res://Assets/gameover.png" id="2_a0ct2"]
 [ext_resource type="Theme" uid="uid://infegbnmvssg" path="res://ButtonTheme.tres" id="3_fjrha"]
 
