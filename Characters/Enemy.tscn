@@ -35,7 +35,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Dead",
-"speed": 2.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -88,10 +88,13 @@ language = "es"
 position = Vector2(33.4596, -3.35019)
 scale = Vector2(1.13586, 1.24439)
 sprite_frames = SubResource("SpriteFrames_wof2d")
+animation = &"Dead"
 autoplay = "default"
+frame_progress = 0.758993
 
 [node name="Shape" type="CollisionShape2D" parent="."]
 position = Vector2(33.4595, -2.09386)
 shape = SubResource("CircleShape2D_5t3id")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="dead" from="." to="." method="_on_dead"]

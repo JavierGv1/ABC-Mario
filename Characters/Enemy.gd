@@ -1,5 +1,7 @@
 class_name Enemy extends Area2D
 
+signal dead
+
 @export var blue = Color("#4682b4")
 @export var red = Color("#639765")
 @export var green = Color("#a65455")
@@ -45,6 +47,10 @@ func get_bbcode_end_color_tag() -> String:
 
 func _on_body_entered(body):
 	if body is Player:
-		print("body")
 		var player = body
-		player.die()
+		player._on_die()
+
+func _on_dead():
+	_animated_sprite.play("Dead")
+	await _animated_sprite.animation_finished
+	queue_free()

@@ -14,6 +14,7 @@ var dedos_teclas = {
 
 # Función para resaltar una tecla y el dedo correspondiente
 func resaltar_tecla_y_dedo(letra: String) -> void:
+	reiniciar_colores_teclas()
 	var tecla_nombre = ""
 	var dedo_nombre = ""
 
@@ -36,12 +37,10 @@ func resaltar_tecla_y_dedo(letra: String) -> void:
 
 func reiniciar_colores_teclas() -> void:
 	print("Reinicio de los colores de las teclas y dedos")
-	
-	for tecla in $Teclas.get_children():
-		if tecla is ColorRect:
-			tecla.color = Color("#ffffff")  # Restaura el color a blanco
+	for key in $Teclas.get_children():
+		if key is ColorRect:
+			key.color = Color(1,1,1,1)  # Restaura el color a blanco
 
-	
-	for dedo in $Dedos.get_children():
-		if dedo is ColorRect:
-			dedo.color = Color("#ffffff")  # Restaura el color a blanco
+	for finger in $Dedos.get_children():
+		if finger is ColorRect:
+			finger.color = Color(1,1,1,1)  # Restaura el color a blanco

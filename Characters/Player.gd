@@ -7,5 +7,6 @@ signal died
 func _process(_delta):
 	_animated_sprite.play("default")
 
-func die():
-	emit_signal("died")
+func _on_die():
+	died.emit()
+	

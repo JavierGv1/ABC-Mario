@@ -1,4 +1,3 @@
-res://Escenas/game_over.tscn
 res://Escenas/main_menu.tscn
 res://Characters/Enemy.gd
 res://Escenas/Levels/PrompList.gd
@@ -11,3 +10,8 @@ res://Elements/Teclado.tscn
 res://Characters/Enemy.tscn
 res://HUD.tscn
 res://lives.tscn
+res://levels.tscn
+res://Escenas/game_over.tscn
+res://Elements/Teclado.gd
+res://Escenas/Levels/Typing.gd
+res://Characters/Player.gd
