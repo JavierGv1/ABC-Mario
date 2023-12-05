@@ -3,7 +3,9 @@
 [ext_resource type="FontFile" uid="uid://bhgxrt1w2x0tf" path="res://SuperMario256.ttf" id="1_ficuq"]
 
 [resource]
-default_font_size = 15
+default_base_scale = 2.0
+default_font_size = 300
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
-RichTextLabel/constants/outline_size = 10
+RichTextLabel/constants/outline_size = 150
+RichTextLabel/constants/table_h_separation = 10000
 RichTextLabel/fonts/normal_font = ExtResource("1_ficuq")

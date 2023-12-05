@@ -75,14 +75,14 @@ text = "Jugar"
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_x3bon")
-text = "Jugar"
+text = "Demo"
 
 [node name="Option" type="Button" parent="Buttons"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("2_x3bon")
-text = "Opciones"
+text = "tablero"
 icon_alignment = 1
 
 [node name="Quit" type="Button" parent="Buttons"]
@@ -96,4 +96,5 @@ icon_alignment = 1
 
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Buttons/Demo" to="." method="_on_demo_pressed"]
+[connection signal="pressed" from="Buttons/Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]

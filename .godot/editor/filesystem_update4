@@ -4,7 +4,7 @@ res://Escenas/Levels/PrompList.gd
 res://Label.tres
 res://ButtonTheme.tres
 res://HUD.tres
-res://Escenas/Levels/Typing.tscn
+res://Escenas/Levels/Demo.tscn
 res://Characters/Player.tscn
 res://Elements/Teclado.tscn
 res://Characters/Enemy.tscn
@@ -12,6 +12,12 @@ res://HUD.tscn
 res://lives.tscn
 res://levels.tscn
 res://Escenas/game_over.tscn
-res://Escenas/Levels/Typing.gd
-res://Escenas/Levels/Demo.tscn
+res://Escenas/Levels/Typing.tscn
 res://Escenas/MainMenu.gd
+res://Escenas/Levels/Typing.gd
+res://Characters/PromptList.gd
+res://Escenas/game_over.gd
+res://Escenas/Levels/Global.gd
+res://HUD.gd
+res://Escenas/Scoreboard.tscn
+res://GameOverUI.tres

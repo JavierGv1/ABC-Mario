@@ -63,7 +63,7 @@ position = Vector2(-40, 0)
 position = Vector2(48, 264)
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 2.0
 autostart = true
 
 [node name="TextureRect" type="TextureRect" parent="."]

@@ -9,6 +9,9 @@ var Enemy = preload("res://Characters/Enemy.tscn")
 @onready var spawn_container = $SpawnContainer
 @onready var HUD = $UI/HUD
 @onready var player = $Player
+@onready var timer  = $SpawnTimer
+@onready var vel = 1
+@onready var time = 4
 
 # Variables de juego
 var active_enemy = null
@@ -28,12 +31,6 @@ var lives =3:
 func _ready() -> void:
 	Score = 0
 	lives = 3
-	
-	# Instanciar y agregar el panel del teclado
-	#var teclado_instance = teclado_scene.instantiate()
-	#add_child(teclado_instance)
-	#teclado_panel = teclado_instance.get_node("/root/Main/PanelDelTeclado")
-
 	# Iniciar el juego con la creación de un enemigo
 	spawn_enemy()
 	find_new_active_enemy()
@@ -84,17 +81,24 @@ func _unhandled_input(event: InputEvent) -> void:
 				print("Puntaje: ",Score )
 
 func _on_spawn_timer_timeout() -> void:
+	if time < 1 :
+		timer.start(time)
+		time = time - time*0.01
+	else: 
+		timer.start(1)
 	spawn_enemy()
 
 # Generar un nuevo enemigo
 func spawn_enemy() -> void:
 	var enemy_instance = Enemy.instantiate()
+	enemy_instance.set_vel(randf()*7.5+2.0)
 	var spawn = spawn_container.get_children()
 	enemy_container.add_child(enemy_instance)
 	enemy_instance.global_position = spawn[0].global_position
 	
 func _on_player_died():
-	print("vidas:",lives)
 	lives -=1
 	if lives == 0:
+		Global.set_current_scene(get_tree().current_scene.scene_file_path)
+		Global.set_score(Score)
 		get_tree().change_scene_to_file("res://Escenas/game_over.tscn")

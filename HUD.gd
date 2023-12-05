@@ -2,7 +2,7 @@ extends Control
 
 @onready var lives = $Lives
 
-@onready var score =$Score:
+@onready var score = $Score:
 	set(value):
 		score.text = "Puntaje: " + str(value)
 

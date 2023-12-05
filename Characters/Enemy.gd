@@ -17,7 +17,9 @@ func _physics_process(_delta: float) -> void:
 	_animated_sprite.play("default")
 
 func _ready() -> void:
-	prompt_text = PromptList.get_prompt()
+	var scene = get_tree().get_current_scene()
+	var scene_name = scene.get_name()
+	prompt_text = PromptList.get_prompt(scene_name)
 	prompt.parse_bbcode(add_tags(prompt_text))
 
 func get_prompt() -> String:
@@ -54,3 +56,6 @@ func _on_dead():
 	_animated_sprite.play("Dead")
 	await _animated_sprite.animation_finished
 	queue_free()
+
+func set_vel(vel : int):
+	speed = vel

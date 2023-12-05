@@ -1,9 +1,12 @@
-ColorRect
-TextureRect
-VBoxContainer
 Button
+VBoxContainer
+ConfirmationDialog
+LineEdit
 Label
 HBoxContainer
+TextureRect
+Node
+ColorRect
 TextEdit
 Sprite2D
 CharacterBody2D

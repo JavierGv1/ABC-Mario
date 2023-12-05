@@ -57,27 +57,34 @@ process_mode = 3
 position = Vector2(1080, 536)
 scale = Vector2(2.68981, 2.38794)
 script = ExtResource("1_xxpxd")
+blue = null
+red = null
+green = null
+speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Texto" type="RichTextLabel" parent="."]
-clip_contents = false
 layout_direction = 1
-offset_left = -26.7676
-offset_top = -33.9204
-offset_right = 2352.23
-offset_bottom = 443.08
-scale = Vector2(0.05, 0.05)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 2.71774
+offset_top = -34.0017
+offset_right = 60.7177
+offset_bottom = -9.00168
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("2_ro1m8")
 theme_type_variation = &"Enemy"
 bbcode_enabled = true
 text = "hola"
-fit_content = true
 scroll_active = false
-autowrap_mode = 2
+autowrap_mode = 0
 shortcut_keys_enabled = false
 language = "es"
 
