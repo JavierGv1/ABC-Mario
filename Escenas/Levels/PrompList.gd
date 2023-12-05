@@ -10,4 +10,4 @@ var Words = [
 func get_prompt() -> String:
 	var word_index = randi() % Words.size()
 	var word = Words[word_index]
-	return wordz
+	return word

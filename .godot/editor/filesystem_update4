@@ -12,3 +12,6 @@ res://HUD.tscn
 res://lives.tscn
 res://levels.tscn
 res://Escenas/game_over.tscn
+res://Escenas/Levels/Typing.gd
+res://Escenas/Levels/Demo.tscn
+res://Escenas/MainMenu.gd

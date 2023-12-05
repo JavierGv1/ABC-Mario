@@ -1,17 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://balgbfvnua26y"]
+[gd_scene load_steps=8 format=3 uid="uid://dfx5r8m5kk4m3"]
 
-[ext_resource type="Script" path="res://Escenas/Levels/Typing.gd" id="1_xb2g5"]
-[ext_resource type="Shader" path="res://Shaders/Background.gdshader" id="2_53frs"]
-[ext_resource type="Texture2D" uid="uid://6b01de046frf" path="res://Assets/background.jpg" id="3_r7ndp"]
-[ext_resource type="PackedScene" uid="uid://ddut4m4fe23hq" path="res://HUD.tscn" id="4_d2opt"]
-[ext_resource type="PackedScene" uid="uid://cqrrcnmanbe3p" path="res://Characters/Player.tscn" id="4_fb6pe"]
-[ext_resource type="Texture2D" uid="uid://dsceos4t2gnbq" path="res://Assets/mecanografia.jpg" id="6_wlp7r"]
+[ext_resource type="Script" path="res://Escenas/Levels/Typing.gd" id="1_wa3io"]
+[ext_resource type="Shader" path="res://Shaders/Background.gdshader" id="2_wu1km"]
+[ext_resource type="Texture2D" uid="uid://6b01de046frf" path="res://Assets/background.jpg" id="3_7q0al"]
+[ext_resource type="PackedScene" uid="uid://ddut4m4fe23hq" path="res://HUD.tscn" id="4_wwwi8"]
+[ext_resource type="PackedScene" uid="uid://cqrrcnmanbe3p" path="res://Characters/Player.tscn" id="5_kscau"]
+[ext_resource type="Texture2D" uid="uid://dsceos4t2gnbq" path="res://Assets/mecanografia.jpg" id="6_d5crg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1quhv"]
-shader = ExtResource("2_53frs")
+shader = ExtResource("2_wu1km")
 
-[node name="Level1" type="Node"]
-script = ExtResource("1_xb2g5")
+[node name="Demo" type="Node"]
+script = ExtResource("1_wa3io")
 
 [node name="Background" type="TextureRect" parent="."]
 texture_repeat = 2
@@ -24,12 +24,12 @@ offset_right = 372.0
 offset_bottom = -253.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_r7ndp")
+texture = ExtResource("3_7q0al")
 expand_mode = 1
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="HUD" parent="UI" instance=ExtResource("4_d2opt")]
+[node name="HUD" parent="UI" instance=ExtResource("4_wwwi8")]
 
 [node name="EnemyContainer" type="Node2D" parent="."]
 position = Vector2(1234, 309)
@@ -40,7 +40,7 @@ position = Vector2(1215, 303)
 [node name="Position" type="Marker2D" parent="SpawnContainer"]
 position = Vector2(-40, 0)
 
-[node name="Player" parent="." instance=ExtResource("4_fb6pe")]
+[node name="Player" parent="." instance=ExtResource("5_kscau")]
 position = Vector2(48, 264)
 
 [node name="SpawnTimer" type="Timer" parent="."]
@@ -59,7 +59,7 @@ offset_top = 384.0
 offset_right = 1573.0
 offset_bottom = 1011.0
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("6_wlp7r")
+texture = ExtResource("6_d5crg")
 stretch_mode = 4
 
 [connection signal="died" from="Player" to="." method="_on_player_died"]
