@@ -63,10 +63,10 @@ script = ExtResource("1_xxpxd")
 [node name="Texto" type="RichTextLabel" parent="."]
 clip_contents = false
 layout_direction = 1
-offset_left = -26.7676
-offset_top = -33.9204
-offset_right = 2352.23
-offset_bottom = 443.08
+offset_left = -9.66455
+offset_top = -28.0579
+offset_right = 1715.34
+offset_bottom = 271.942
 scale = Vector2(0.05, 0.05)
 size_flags_horizontal = 4
 size_flags_vertical = 4

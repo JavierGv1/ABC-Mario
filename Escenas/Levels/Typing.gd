@@ -81,7 +81,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				print("Puntaje: ",Score )
 
 func _on_spawn_timer_timeout() -> void:
-	if time < 1 :
+	if time < 0.5 :
 		timer.start(time)
 		time = time - time*0.01
 	else: 
@@ -101,4 +101,5 @@ func _on_player_died():
 	if lives == 0:
 		Global.set_current_scene(get_tree().current_scene.scene_file_path)
 		Global.set_score(Score)
+
 		get_tree().change_scene_to_file("res://Escenas/game_over.tscn")

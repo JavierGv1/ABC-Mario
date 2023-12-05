@@ -22,6 +22,7 @@ texture = ExtResource("1_yomyd")
 expand_mode = 1
 
 [node name="Buttons" type="VBoxContainer" parent="."]
+visible = false
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -50,6 +51,7 @@ Principal"
 icon_alignment = 1
 
 [node name="Title" type="Label" parent="."]
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -96,7 +98,6 @@ text = "0"
 label_settings = ExtResource("3_u6b7i")
 
 [node name="Submit" type="Label" parent="."]
-visible = false
 offset_left = 326.5
 offset_top = 262.5
 offset_right = 953.5
@@ -146,3 +147,8 @@ grow_vertical = 2
 theme = ExtResource("2_b4ler")
 action_mode = 0
 text = "Enviar"
+
+[connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="text_submitted" from="Submit/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="Submit/Confirm" to="." method="_on_confirm_pressed"]
